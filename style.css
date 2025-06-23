@@ -590,6 +590,7 @@ li a:hover::before{
 #menu-icon{
     font-size: 2rem;
     display: none;
+    cursor: pointer;
 }
 
 /* MAIN FIX: Better balanced section spacing */
@@ -624,7 +625,7 @@ section{
     height: 40vw; /* Force the same height as width to make it square */
     border-radius: 50%;
     object-fit: cover; /* This will crop the image to fit the square while maintaining aspect ratio */
-    object-position: center; /* Centers the image within the crop area */
+    object-position: center top; /* Centers the image within the crop area */
 }
 
 .info-box{
@@ -915,6 +916,11 @@ footer ul li a{
     .about-container{
         flex-direction: column;
     }
+    .about img{
+        width: 60vw;
+        height: 60vw;
+        object-position: center 20%; /* Add this */
+    }
     .input-box input{
         padding: 1rem 2rem;
         font-size: 1.8rem;
@@ -931,8 +937,6 @@ footer ul li a{
     .experience-info img{
         width: 70vw;
     }
-    
-    /* Comfortable spacing on mobile */
     section{
         padding: 3rem 10%;
     }
@@ -967,14 +971,20 @@ footer ul li a{
         display: block;
     }
     header{
-        padding: 1rem 5rem;
-        gap: 8rem;
+        padding: 1rem 2rem; 
+        gap: 2rem; 
+        justify-content: space-between; 
     }
     header .logo{
         font-size: 1.5rem;
     }
     .about-container img{
         width: 80vw;
+    }
+    .about img{
+        width: 70vw;
+        height: 70vw;
+        object-position: center 15%; 
     }
     .input-box input{
         padding: 0.5rem 3rem;
